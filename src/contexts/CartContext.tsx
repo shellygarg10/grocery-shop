@@ -178,7 +178,7 @@ export const CartProvider = ({
     dispatch({ type: "UPDATE_QUANTITY", productId, quantity });
   };
 
-  const getSubtotal = () => {
+  const getCartTotal = () => {
     return state.items.reduce((total, item) => {
       const price = parseFloat(item.product.price.replace("£", ""));
       return total + price * item.quantity;
@@ -192,8 +192,13 @@ export const CartProvider = ({
     }, 0);
   };
 
-  const getCartTotal = () => {
-    return getSubtotal() - getDiscount();
+  const getSubtotal = () => {
+    const regularItemsTotal = getCartTotal();
+    const offerItemsTotal = state.offerItems.reduce((total, item) => {
+      const price = parseFloat(item.product.price.replace("£", ""));
+      return total + price * item.quantity;
+    }, 0);
+    return regularItemsTotal + offerItemsTotal;
   };
 
   const getTotalItems = () => {
