@@ -54,7 +54,7 @@ const LikedItems = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="mb-6">
           <Link
-            to="/search"
+            to="/"
             className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900 mb-4 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -92,7 +92,7 @@ const LikedItems = () => {
               Start browsing products and like the ones you're interested in!
             </p>
             <Link
-              to="/search"
+              to="/"
               className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-colors"
             >
               Continue Shopping

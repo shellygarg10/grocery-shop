@@ -22,7 +22,7 @@ const Checkout = () => {
             </h1>
             <p className="text-gray-600 mb-6">Add some items to get started</p>
             <Link
-              to="/search"
+              to="/"
               className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -40,7 +40,7 @@ const Checkout = () => {
 
       <div className="max-w-2xl mx-auto px-4 py-6">
         <div className="flex items-center space-x-4 mb-6">
-          <Link to="/search" className="p-2 hover:bg-gray-100 rounded-lg">
+          <Link to="/" className="p-2 hover:bg-gray-100 rounded-lg">
             <ArrowLeft className="w-5 h-5 text-gray-600" />
           </Link>
           <h1 className="text-2xl font-semibold text-gray-900">Checkout</h1>

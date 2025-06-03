@@ -19,11 +19,11 @@ const Header = ({ searchTerm = "", onSearchChange }: HeaderProps) => {
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/search" className="text-xl font-bold text-gray-900">
+          <Link to="/" className="text-xl font-bold text-gray-900">
             GROCERIES
           </Link>
 
-          {location.pathname === "/search" && (
+          {location.pathname === "/" && (
             <div className="flex-1 max-w-lg mx-8">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
